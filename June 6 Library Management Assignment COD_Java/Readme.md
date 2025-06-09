@@ -140,3 +140,4 @@ Book returned successfully!
 +----------------+       | + searchBooks()|
                         +----------------+
 ```
+![Sequence Chart LMS.png](Sequence%20Chart%20LMS.png)
