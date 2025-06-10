@@ -32,6 +32,11 @@ public class Main {
             System.out.println("6. List All Books");
             System.out.println("7. List Borrowing Members");
             System.out.println("8. Exit");
+            System.out.println("9. Remove Book");
+            System.out.println("10. Remove Member");
+
+            System.out.println("11. Exit Process");
+
             System.out.print("Choose option: ");
 
             int choice = scanner.nextInt();
@@ -45,7 +50,10 @@ public class Main {
                 case 5 -> searchBooks();
                 case 6 -> listAllBooks();
                 case 7 -> listBorrowingMembers();
-                case 8 -> {
+                case 9 -> removeBook();
+                case 10 -> removeMember();
+
+                case 11 -> {
                     System.out.println("Exiting...");
                     System.exit(0);
                 }
@@ -90,6 +98,18 @@ public class Main {
 
         library.addMember(new Member(id, name, email));
         System.out.println("Member added successfully!");
+    }
+
+    private static void removeBook() {
+        System.out.print("Enter Book ID to remove: ");
+        String bookId = scanner.nextLine();
+        library.removeBook(bookId);
+    }
+
+    private static void removeMember() {
+        System.out.print("Enter Member ID to remove: ");
+        String memberId = scanner.nextLine();
+        library.removeMember(memberId);
     }
 
     private static void issueBook() {

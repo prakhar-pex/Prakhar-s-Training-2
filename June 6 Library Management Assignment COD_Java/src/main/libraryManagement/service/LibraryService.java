@@ -29,6 +29,28 @@ public class LibraryService {
         memberRepository.add(member.getMemberId(), member);
     }
 
+    // Remove a book by ID
+    public void removeBook(String bookId) {
+        if (!bookRepository.exists(bookId)) {
+            System.out.println("Book not found.");
+            return;
+        }
+        bookRepository.remove(bookId);
+        System.out.println("Book removed.");
+    }
+
+
+
+    // Remove a member by ID
+    public void removeMember(String memberId) {
+        if (!memberRepository.exists(memberId)) {
+            System.out.println("Book not found.");
+            return;
+        }
+        bookRepository.remove(memberId);
+        System.out.println("Member removed.");
+    }
+
 
     // Issue a book to a member
     public void issueBook(String bookId, String memberId)
