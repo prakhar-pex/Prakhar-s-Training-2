@@ -1,3 +1,5 @@
+![Sequence Chart LMS.png](Sequence%20Chart%20LMS.png)
+
 # **Library Management System - README**
 
 ## **1. Setup Instructions**
@@ -140,4 +142,3 @@ Book returned successfully!
 +----------------+       | + searchBooks()|
                         +----------------+
 ```
-![Sequence Chart LMS.png](Sequence%20Chart%20LMS.png)
